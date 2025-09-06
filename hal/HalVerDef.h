@@ -21,6 +21,24 @@
 //#define TRUE	_TRUE
 //#define FALSE	_FALSE
 
+#if defined(__unix) || defined(__APPLE__)
+
+#ifndef TRUE
+#define TRUE true
+#endif
+
+#ifndef FALSE
+#define FALSE false
+#endif
+
+#ifndef BOOLEAN
+typedef bool BOOLEAN;
+#endif
+
+#endif
+
+
+
 /* HAL_IC_TYPE_E */
 typedef enum tag_HAL_IC_Type_Definition {
 	CHIP_8192S	=	0,

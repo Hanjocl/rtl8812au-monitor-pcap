@@ -17,6 +17,13 @@
 
 #include "drv_types.h"
 
+#if defined(__unix__) || defined(__APPLE__)
+typedef bool BOOLEAN;
+#define TRUE true
+#define FALSE false
+#define VOID void
+#endif
+
 #define	EFUSE_ERROE_HANDLE		1
 
 #define	PG_STATE_HEADER		0x01
