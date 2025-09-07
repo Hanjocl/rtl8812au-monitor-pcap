@@ -8,6 +8,7 @@
 #include "rtl8812a_spec.h"
 
 #include <memory>
+#include <chrono>
 #include <thread>
 
 #define DRVINFO_SZ 4
